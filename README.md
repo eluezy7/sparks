@@ -29,6 +29,7 @@ RUN composer install
 
 # 2. Docker Compose でビルド＆起動
 
+
 <code>docker compose up --build</code>
 
 フロントエンド: http://localhost:3000
