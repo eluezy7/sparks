@@ -21,7 +21,7 @@ cd my-portfolio
 </code>
 
 ※初回のみDockerfileのコメントアウトを
-削除してください<br>
+削除してください<br><br>
 <code>###RUN composer install<br>
 　↓<br>
 RUN composer install
