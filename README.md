@@ -75,9 +75,10 @@ Docker Compose によるワンクリック起動
 <code>
 / (ルート)
 ├─ frontend/      # Next.js ソースコード
+|   └─ Dockerfile(frontend)
 ├─ backend/       # Laravel ソースコード
+|   └─ Dockerfile(backend)
 ├─ docker-compose.yml
-├─ Dockerfile     # frontend 用
 └─ README.md      # このファイル
 </code>
 💡 Tips
