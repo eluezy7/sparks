@@ -65,7 +65,8 @@ Git, GitHub
 
 🎯 主な機能
 
-[予定]Next.js と Laravel 間の API 連携サンプル (GET/POST)
+[予定]Next.js と Laravel 間の API 連携サンプル (GET/POST)<br>
+[GET 200 OK] 確認済み
 
 Docker Compose によるワンクリック起動
 
