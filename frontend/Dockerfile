@@ -12,5 +12,5 @@ COPY . .
 EXPOSE 3000
 
 # ③ Next.js を 0.0.0.0:3000 で起動するように -H を追加
-CMD ["npx", "next", "dev", "-H", "0.0.0.0", "-p", "3000", "--turbopack"]
+CMD ["npx", "next", "dev", "-H", "0.0.0.0", "-p", "3000"]
 
