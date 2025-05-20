@@ -55,6 +55,8 @@ Laravel 12 (PHP 8.x)
 
 Docker, Docker Compose
 
+nginx　(追加済)
+
 DB
 
 MySQL (Docker ボリューム)
@@ -94,6 +96,11 @@ Docker Compose によるワンクリック起動
 ・Next.js + TypeScript<br>
 　Next.jsは最新のフロントエンド技術を取り入れたフレームワークであり、TypeScriptと併用することで型の安全性と保守性を高めることができます。開発効率とユーザー体験の向上を両立できるため、採用いたしました。
 
+・Nginx<br>
+　Nginxを追加しました。
+
 📝 ライセンス
+
+This project is licensed under the MIT License.
 
 MIT © eluezy7
