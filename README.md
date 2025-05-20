@@ -83,7 +83,7 @@ Docker Compose によるワンクリック起動
 |   └─ Dockerfile(backend)
 ├─ docker-compose.yml
 ├─ nginx
-|   └─niginx/nginx.conf
+|   └─nginx.conf
 └─ README.md      # このファイル
 </code>
 💡 Tips
