@@ -1,10 +1,10 @@
 <h1><b>Laravel × Next.js Full-Stack App</b></h1>
 
-Docker Compose で一発起動できるフルスタック構成のポートフォリオ
+Laravel × Next.js によるモダンなフルスタックアプリ構成です。Docker Compose を使用して、インフラを含めた開発環境を一発で構築可能です。将来的な拡張や本番環境へのデプロイを見据えた、実務でも通用するベースを目指しました。
 
 🔥 プロジェクト概要
 
-フロントエンド: Next.js (React, Turbopack)
+フロントエンド: Next.js (React)
 
 バックエンド: Laravel 12
 
@@ -33,9 +33,9 @@ RUN composer install
 
 <code>docker compose up --build</code>
 
-フロントエンド: http://localhost:3000
+フロントエンド: http://localhost
 
-バックエンドAPI: http://localhost:8000/api
+バックエンドAPI: http://localhost/api/ping
 
 🛠 技術スタック
 
@@ -45,7 +45,7 @@ RUN composer install
 
 フロントエンド
 
-Next.js (React, Turbopack)
+Next.js (React, type script)
 
 バックエンド
 
@@ -67,7 +67,7 @@ Git, GitHub
 
 🎯 主な機能
 
-[予定]Next.js と Laravel 間の API 連携サンプル (GET/POST)<br>
+Next.js と Laravel 間の API 連携サンプル (GET/POST)<br>
 [GET 200 OK] 確認済み
 
 Docker Compose によるワンクリック起動
@@ -83,7 +83,7 @@ Docker Compose によるワンクリック起動
 |   └─ Dockerfile(backend)
 ├─ docker-compose.yml
 ├─ nginx
-|   └─default.conf
+|   └─niginx/nginx.conf
 └─ README.md      # このファイル
 </code>
 💡 Tips
@@ -93,7 +93,7 @@ Docker Compose によるワンクリック起動
 ▼ 技術選定理由<br>
 
 ・Laravel + Docker<br>
-　Laravelは柔軟性と拡張性に優れており、Dockerと組み合わせることで開発環境の統一が可能となります。将来的にはゲームサーバーとしての活用も想定しており、その基盤として適していると判断いたしました。
+　安定したWeb API基盤を構築しつつ、将来的にはゲームサーバーとしての拡張も視野に入れています。そのため、柔軟性と拡張性に優れた Laravel を選定しました。Docker を併用することで開発環境の統一・再現性を担保しています。
 
 ・Next.js + TypeScript<br>
 　Next.jsは最新のフロントエンド技術を取り入れたフレームワークであり、TypeScriptと併用することで型の安全性と保守性を高めることができます。開発効率とユーザー体験の向上を両立できるため、採用いたしました。
