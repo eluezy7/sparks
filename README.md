@@ -82,8 +82,6 @@ Docker Compose によるワンクリック起動
 ├─ backend/       # Laravel ソースコード
 |   └─ Dockerfile(backend)
 ├─ docker-compose.yml
-├─ nginx
-|   └─nginx.conf
 └─ README.md      # このファイル
 </code>
 💡 Tips
