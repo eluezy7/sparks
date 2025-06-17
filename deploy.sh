@@ -26,13 +26,14 @@ docker-compose down -v
 # docker-compose exec app php artisan migrate --force
 
 # 6. キャッシュクリア
-docker-compose exec app php artisan config:clear
-docker-compose exec app php artisan cache:clear
-docker-compose exec app php artisan view:clear
+#docker-compose exec app php artisan config:clear
+#docker-compose exec app php artisan cache:clear
+#docker-compose exec app php artisan view:clear
 
 # ─────────────────────────────────────────────
 
 # 7. 再ビルド＆起動
 docker-compose up -d --build
+
 
 echo "✅ デプロイ完了！"
