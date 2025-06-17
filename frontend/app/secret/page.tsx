@@ -51,13 +51,13 @@ const Secret: FC = () => {
                             </button>
                         </div>
                         <div className="mt-1">
-                                 <img
-                                        src="http://localhost:8000/images/neko.png"      // フロントからはこのまま
+                                 {/*<img
+                                        src="https://sparks-dev.online/images/neko.png"      // フロントからはこのまま
                                         width={40}
                                         height={40}
                                         alt="User Avatar"
                                         className="rounded-full ml-2"
-                                    />
+                                    />*/}
                         </div>
                     </div>
                 </header>
