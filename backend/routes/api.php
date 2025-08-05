@@ -20,11 +20,12 @@ Route::get('/ping', function () {
 Route::post('/auth/login', [AuthController::class,'login']);
 
 Route::middleware('auth:api')->group(function(){
-    Route::get('/auth/me',   [AuthController::class,'me']);
+    Route::get('/auth/me', [AuthController::class,'me']);
     Route::post('/auth/logout',[AuthController::class,'logout']);
 });
 
 Route::post('/auth/register', [AuthController::class, 'register']);
+
 
 Route::options('/{any}', function () {
     return response('', 204)

@@ -8,6 +8,7 @@ use Illuminate\Http\Middleware\HandleCors;
 
 
 
+
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
@@ -15,27 +16,11 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
-    ->withMiddleware(function (Middleware $middleware) {
-       
-
-        $middleware->append(\Illuminate\Http\Middleware\HandleCors::class);
-       
+    ->withMiddleware(function (Middleware $middleware) { 
+        $middleware->prepend(HandleCors::class);
     })
-    ->withExceptions(function (Exceptions $exceptions) {
-        $exceptions->render(function (\Illuminate\Validation\ValidationException $e) {
-        return response()->json([
-            'message' => 'バリデーションエラー',
-            'errors' => $e->errors(),
-        ], 422);
-    });
-    
-    $exceptions->render(function (\Tymon\JWTAuth\Exceptions\JWTException $e) {
-        return response()->json([
-            'message' => 'JWTエラー',
-            'error' => $e->getMessage(),
-        ], 401);
-    });
-})
+    ->withExceptions(function (Exceptions $exceptions) {   
+    })
 ->create(); 
 
 

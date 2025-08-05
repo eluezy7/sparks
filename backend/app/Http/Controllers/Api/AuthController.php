@@ -6,16 +6,20 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-//use JWTAuth;
-use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
+
+
+use JWTAuth;
 use Validator;
 
-class AuthController extends Controller
+class AuthController extends Controller 
 {
-    public function __construct()
+     public function __construct()
     {
-       // $this->middleware('auth:api')->except(['login', 'register']);
+        $this->middleware('api');
     }
+
     
     public function login(Request $req)
     {
@@ -54,13 +58,23 @@ class AuthController extends Controller
             'password' => Hash::make($req->password),
         ]);
 
-        $token = JWTAuth::fromUser($user);
+        try {
+                $token = JWTAuth::fromUser($user);
+            } catch (\Exception $e) {
+                return response()->json([
+                    'message' => 'トークン生成時に例外が発生',
+                    'error' => $e->getMessage(),
+                    'user_id' => $user->id ?? null,
+                    'user' => $user
+                ], 500);
+            }
 
         return response()->json([
             'message' => '登録成功',
             'user'    => $user,
             'token'   => $token
-            ], 201);
+            ], 201)
+            ->header('Content-Type', 'application/json');
     }
 
 }
