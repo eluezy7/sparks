@@ -12,7 +12,7 @@ return [
 
     'allowed_headers' => ['*'],
 
-    'exposed_headers' => [],
+    'exposed_headers' => ['Set-Cookie', 'Authorization'],
 
     'max_age' => 0,
 
