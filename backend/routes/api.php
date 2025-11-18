@@ -3,6 +3,7 @@
 // routes/api.php
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\UserInfoController;
 
@@ -26,7 +27,9 @@ Route::middleware('auth:api')->group(function(){
 
 Route::post('/auth/register', [AuthController::class, 'register']);
 
+Route::post('/post/create', [PostController::class, 'create']);
 
+/*
 Route::options('/{any}', function () {
     return response('', 204)
         ->header('Access-Control-Allow-Origin', 'http://localhost:3000')
@@ -34,4 +37,5 @@ Route::options('/{any}', function () {
         ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
         ->header('Access-Control-Allow-Credentials', 'true');
 })->where('any', '.*');
-
+*/
+Route::apiResource('posts', \App\Http\Controllers\Api\PostController::class);

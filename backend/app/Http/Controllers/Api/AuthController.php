@@ -41,6 +41,8 @@ class AuthController extends Controller
         return response()->json(['msg'=>'ログアウトしました']);
     }
 
+    
+
     public function register(Request $req)
     {
         
