@@ -1,0 +1,5 @@
+# ─── MySQL Docker ボリューム ──────────────────────
+mysql_data/
+*.sql   # もし SQL ダンプファイルも含みたくなければ
+/docker
+/nginx
